@@ -4,7 +4,9 @@
 
 :root {
   --bgblue: #0290ff;
-  --bgdark: #121212;
+  --bgdark: #303540;
+  --bgwhite: #fff;
+  --bginfo: #17a2b8;
 }
 
 body {

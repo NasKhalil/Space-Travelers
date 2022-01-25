@@ -4,7 +4,7 @@ import thunk from 'redux-thunk';
 import missionsReducer from './missions/missions';
 import rockectsReducer from './rockets/rockets';
 
-const reducer = combineReducers({ missionsReducer, rockectsReducer });
+const reducer = combineReducers({ missionsReducer, rockets: rockectsReducer });
 
 const store = createStore(
   reducer,
