@@ -14,14 +14,14 @@ const Header = () => (
       <nav>
         <NavLink
           to="/profile"
-          activeClassName="active"
+          activeclassname="active"
         >
           {' '}
           My profile
         </NavLink>
         <NavLink
           to="/rockets"
-          activeClassName="active"
+          activeclassname="active"
         >
           Rockets
         </NavLink>
