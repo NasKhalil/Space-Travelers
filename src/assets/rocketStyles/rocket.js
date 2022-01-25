@@ -2,9 +2,7 @@ import styled from 'styled-components';
 
 export const RocketContainer = styled.div`
   display: flex;
-  margin-left: 70px;
-  margin-right: 70px;
-  margin-top: 50px;
+  margin: 50px 70px 0 70px;
   gap: 70px;
   height: 100%;
 `;
