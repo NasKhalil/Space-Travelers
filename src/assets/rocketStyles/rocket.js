@@ -19,16 +19,23 @@ export const RocketImgContainer = styled.div`
    }
 `;
 
-export const RocketTextContainer = styled.div``;
+export const RocketTextContainer = styled.div`
+padding: 5px;
+margin-top: 20px;
+`;
 
 export const RocketTitle = styled.h2`
+  
   color: var(--bgdark);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
 `;
 
 export const RocketContent = styled.p`
   font-size: 14px;
   color: var(--bgdark);
   line-height: 25px;
+  font-family: 'Poppins', sans-serif;
 `;
 
 export const RocketButton = styled.button`
