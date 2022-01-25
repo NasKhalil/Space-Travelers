@@ -25,6 +25,12 @@ const Header = () => (
         >
           Rockets
         </NavLink>
+        <NavLink
+          to="/missions"
+          activeclassname="active"
+        >
+          Missions
+        </NavLink>
       </nav>
     </header>
   </>
