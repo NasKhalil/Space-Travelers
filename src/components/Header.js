@@ -3,11 +3,31 @@ import { NavLink } from 'react-router-dom';
 import logo from '../images/planet.png';
 
 const Header = () => (
-  <div>
-    <img src={logo} alt="logo" />
-    <h2>Space Travelers Hub</h2>
-    <NavLink to="/profile"> My profile </NavLink>
-  </div>
+  <>
+    <header>
+      <div className="logo">
+        {' '}
+        <img src={logo} alt="logo" className="mylogo" />
+        {' '}
+        <h1>Space Travelers Hub</h1>
+      </div>
+      <nav>
+        <NavLink
+          to="/profile"
+          activeclassname="active"
+        >
+          {' '}
+          My profile
+        </NavLink>
+        <NavLink
+          to="/rockets"
+          activeclassname="active"
+        >
+          Rockets
+        </NavLink>
+      </nav>
+    </header>
+  </>
 );
 
 export default Header;
