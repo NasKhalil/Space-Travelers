@@ -1,7 +1,11 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
-const MyProfile = () => (
-  <div>profile</div>
-);
-
+const MyProfile = () => {
+ 
+  return (
+    <>
+    </>
+  );
+};
 export default MyProfile;
