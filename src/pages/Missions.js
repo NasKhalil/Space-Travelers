@@ -13,20 +13,25 @@ const Missions = () => {
   }, []);
 
   return (
-    <div>
-      <h2>Missions</h2>
+    <div className="m-5">
       <Table striped bordered hover>
         <thead>
           <tr>
             <th>Mission</th>
             <th>Description</th>
             <th>Status</th>
-            <th>/</th>
           </tr>
         </thead>
         <tbody>
           {
-            missions.map((mission) => <MissionItem key={mission.id} name={mission.name} />)
+            missions.map((mission) => {
+              const { id, name, description } = mission;
+              return (
+                <tr key={id}>
+                  <MissionItem name={name} description={description} />
+                </tr>
+              );
+            })
           }
         </tbody>
       </Table>
