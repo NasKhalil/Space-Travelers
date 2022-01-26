@@ -13,13 +13,6 @@ const Header = () => (
       </div>
       <nav>
         <NavLink
-          to="/profile"
-          activeclassname="active"
-        >
-          {' '}
-          My profile
-        </NavLink>
-        <NavLink
           to="/rockets"
           activeclassname="active"
         >
@@ -30,6 +23,14 @@ const Header = () => (
           activeclassname="active"
         >
           Missions
+        </NavLink>
+        {' | '}
+        <NavLink
+          to="/profile"
+          activeclassname="active"
+        >
+          {' '}
+          My profile
         </NavLink>
       </nav>
     </header>

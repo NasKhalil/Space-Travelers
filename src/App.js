@@ -5,7 +5,6 @@ import Header from './components/Header';
 import MyProfile from './pages/MyProfile';
 import Rockets from './pages/Rockets';
 import Missions from './pages/Missions';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => (
   <Provider store={store}>
