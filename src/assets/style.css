@@ -66,25 +66,24 @@ header nav {
   margin-top: 10px;
 }
 
-@media only screen and (max-width:768px){
+@media only screen and (max-width: 768px) {
   header {
     display: flex;
     flex-direction: column;
   }
+
   header nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    
   }
 
   header h1 {
-    font-size: 1.0em;
+    font-size: 1em;
     color: var(--bgdark);
     font-family: 'Poppins', sans-serif;
     margin-top: 10px;
   }
-  
 }
