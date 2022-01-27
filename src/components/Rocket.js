@@ -5,7 +5,7 @@ import { reserveRocket, cancelRocket } from '../redux/rockets/rockets';
 
 import {
   RocketContainer, RocketImgContainer, RocketTextContainer,
-  RocketTitle, RocketContent, RocketButton, RocketBadge,
+  RocketTitle, RocketContent, RocketButton, RocketButtonWhite, RocketBadge,
 } from '../assets/rocketStyles/rocket';
 
 const Rocket = ({
@@ -31,11 +31,11 @@ const Rocket = ({
           </RocketContent>
           { reserved
             ? (
-              <RocketButton
+              <RocketButtonWhite
                 onClick={() => { handleClickCancel(id); }}
               >
                 Cancel Reservation
-              </RocketButton>
+              </RocketButtonWhite>
             )
             : <RocketButton onClick={() => { handleClickReserve(id); }}>Reserve</RocketButton>}
         </RocketTextContainer>

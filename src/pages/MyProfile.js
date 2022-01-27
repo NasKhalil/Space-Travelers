@@ -1,44 +1,42 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import {
+  Container, MissionContainer, MissionMenu, MissionList, RocketContainer,
+  RocketMenu, RocketList, RocketTitle, MissionTitle,
+} from '../assets/profileStyles/profile';
 
 const MyProfile = () => {
+  const rockets = useSelector((state) => state.rockets);
   const missions = useSelector((state) => state.missionsReducer);
-  let filteredMissions;
-  if (missions) {
-    filteredMissions = missions.filter((mission) => mission.reserved);
-  }
-
-  const styles = {
-    missions: {
-      border: '1px solid #000',
-      borderRadius: '6px',
-      padding: '16px',
-      margin: '16px',
-      width: '350px',
-    },
-  };
+  const reservedMission = missions.filter((mission) => mission.reserved);
+  const reservedRocket = rockets.filter((rocket) => rocket.reserved === true);
   return (
     <>
-      <div>
-        <h2>My Missions</h2>
-        <ul style={styles.missions}>
-          {filteredMissions.map((mission) => {
-            const { name, id } = mission;
-            return (
-              <li
-                key={id}
-                className="list"
-              >
-                <h4 className="name">{name}</h4>
-                <hr />
-              </li>
-            );
-          })}
-        </ul>
-        {(!filteredMissions.length >= 1)
-          ? <h4>No Mission </h4>
-          : null}
-      </div>
+      <Container>
+        <MissionContainer>
+          <MissionTitle>My Missions</MissionTitle>
+          <MissionMenu>
+            { reservedMission.length ? reservedMission.map((miss) => (
+              <>
+                <MissionList key={miss.id}>{miss.name}</MissionList>
+              </>
+            )) : <h2>No list</h2> }
+          </MissionMenu>
+        </MissionContainer>
+
+        <RocketContainer>
+          <RocketTitle>My Rockets</RocketTitle>
+          <RocketMenu>
+            {reservedRocket.length ? reservedRocket.map((roc) => (
+              <>
+                <RocketList key={roc.id}>{roc.rocket_name}</RocketList>
+
+              </>
+            )) : <h2>No List</h2>}
+          </RocketMenu>
+        </RocketContainer>
+      </Container>
+      ;
     </>
   );
 };
