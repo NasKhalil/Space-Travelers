@@ -11,9 +11,9 @@ const App = () => (
     <div className="App">
       <Header />
       <Routes>
-        <Route path="/profile" element={<MyProfile />} />
-        <Route path="/rockets" element={<Rockets />} />
+        <Route path="/" element={<Rockets />} />
         <Route path="/missions" element={<Missions />} />
+        <Route path="/profile" element={<MyProfile />} />
       </Routes>
     </div>
   </Provider>

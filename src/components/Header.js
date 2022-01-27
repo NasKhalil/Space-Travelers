@@ -13,7 +13,7 @@ const Header = () => (
       </div>
       <nav>
         <NavLink
-          to="/rockets"
+          to="/"
           activeclassname="active"
         >
           Rockets
